@@ -1,0 +1,35 @@
+<html>
+<h1>Ajouter une destination</h1>
+<h2>Nouvelle destination</h2>
+<!--
+<form id="formTemp" action="">
+    <input type="text" id="Temp" />
+    <input type="submit" value="Envoyer" />
+</form>
+<h2>Humidité :</h2> !-->
+<form id="formDestination" action="">
+    <input type="text" id="destination" />
+    <input type="submit" value="Envoyer" />
+</form>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+    // expose IO and connect
+        var socket = io();
+        var destinationName = document.getElementById('destinationName');
+        var containedInPlace = document.getElementById('containedInPlace');
+        var description = document.getElementById('description');
+        var travelAgencies = document.getElementById('travelAgencies');
+    
+        formDestination.addEventListener('submit', function(e) {
+            e.preventDefault();
+            socket.emit('destinationName', destinationName.value);
+        });
+        /*
+        formDestination.addEventListener('submit', function(e) {
+            e.preventDefault();
+            socket.emit('description', description.value);
+        }); */
+    </script>
+</html>

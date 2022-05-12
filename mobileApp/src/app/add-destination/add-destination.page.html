@@ -1,0 +1,22 @@
+<form (ngSubmit)="submitForm()">
+  <ion-item> Add new Destination !</ion-item>
+      <ion-item>
+        <ion-label>Name :</ion-label>
+        <ion-input [(ngModel)]="destination.name" name="name" placeholder="destination"></ion-input>
+      </ion-item>
+            <ion-item>
+        <ion-label>Description :</ion-label>
+        <ion-input [(ngModel)]="destination.description" name="description" placeholder="description"></ion-input>
+      </ion-item>
+            <ion-item>
+        <ion-label>Contained in place :</ion-label>
+        <ion-input [(ngModel)]="destination.containedInPlace" name="containedInPlace" placeholder="containedInPlace"></ion-input>
+      </ion-item>
+            <ion-item>
+        <ion-label>Agencies :</ion-label>
+        <ion-input [(ngModel)]="destination.traverlAgencies" name="travelAgencies" placeholder="travelAgencies"></ion-input>
+      </ion-item>
+
+
+      <button ion-button type="submit" block>save</button>
+    </form>
